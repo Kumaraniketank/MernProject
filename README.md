@@ -18,7 +18,7 @@ Clone the Repository:
 
 bash
 Copy code
-git clone https://github.com/your-username/motorcart.git
+git clone https://github.com/Kumaraniketank/motorcart.git
 cd motorcart
 Install Dependencies:
 
