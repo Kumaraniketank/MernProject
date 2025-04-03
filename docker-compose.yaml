@@ -1,0 +1,32 @@
+services:
+  frontend:
+    build: ./frontend\my-react-app
+    container_name: frontend
+    restart: always
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+  backend:
+    build: ./backend
+    container_name: backend
+    restart: always
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo
+    container_name: mongodb
+    restart: always
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_DATABASE: e-commerce
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:

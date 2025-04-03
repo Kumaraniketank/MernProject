@@ -39,6 +39,7 @@ const Login = () => {
         placeholder="Enter Email"
         onChange={(e) => setEmail(e.target.value)}
         value={email}
+        required
       />
       <input
         type="password"
@@ -46,6 +47,7 @@ const Login = () => {
         placeholder="Enter Password"
         onChange={(e) => setPassword(e.target.value)}
         value={password}
+        required
       />
       <button onClick={handlLogin} className="btt" type="button">
         Login
